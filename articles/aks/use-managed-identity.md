@@ -323,6 +323,14 @@ A successful cluster creation using your own kubelet managed identity contains t
 
 Update kubelet identity on an existing cluster with your existing identities. 
 
+> [!WARNING]
+> Updating kubelet MI will upgrade Nodepool, which causes downtime for your AKS cluster as the nodes in the nodepools will be cordoned/drained and then reimaged.
+
+> [!NOTE]
+> To bring your own kubelet MI, you must use User-assigned control MI. 
+>
+
+
 #### Install the `aks-preview` Azure CLI
 
 You also need the *aks-preview* Azure CLI extension version 0.5.64 or later. Install the *aks-preview* Azure CLI extension by using the [az extension add][az-extension-add] command. Or install any available updates by using the [az extension update][az-extension-update] command.
