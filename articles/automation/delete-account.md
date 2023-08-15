@@ -6,7 +6,6 @@ ms.service: automation
 ms.subservice: process-automation
 ms.date: 06/04/2021
 ms.topic: conceptual 
-ms.custom: devx-track-azurepowershell
 ---
 
 # Manage your Azure Automation account
@@ -169,7 +168,8 @@ To recover an Automation account, ensure that the following conditions are met:
 - Before you attempt to recover a deleted Automation account, ensure that resource group for that account exists.
 
 > [!NOTE]
-> You can't recover your Automation account if the resource group is deleted.
+> * If the resource group of the Automation account is deleted, to recover, you must recreate the resource group with the same name. 
+> * Though the resource group isn't present, you can see the Automation account in the deleted list. If the resource group isn't present, the account restore operation fails with the error *Account restore failed*.
 
 ### Recover a deleted Automation account
 
